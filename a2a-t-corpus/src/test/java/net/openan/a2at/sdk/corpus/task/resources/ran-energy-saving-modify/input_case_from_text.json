@@ -21,10 +21,7 @@
               "operationType": {
                 "type": "string",
                 "description": "Operation type of the RAN energy-saving task; allowed values are listed in the enum",
-                "enum": [
-                  "create",
-                  "modify"
-                ]
+                "enum": ["create", "modify"]
               },
               "region": {
                 "type": "string",
@@ -37,10 +34,7 @@
               "energyTargetDirection": {
                 "type": "string",
                 "description": "Direction of the energy target, derived from user wording: 降低/下降/压降 → reduce; 提升/上升 → increase. If no direction word appears in the task, default to reduce (energy-saving tasks reduce the metric by definition).",
-                "enum": [
-                  "reduce",
-                  "increase"
-                ]
+                "enum": ["reduce", "increase"]
               },
               "cellMode": {
                 "type": "string",
@@ -55,10 +49,7 @@
                 "description": "Daily end time of the energy-saving window. Values carry an explicit UTC offset (e.g. 12:00:00+08:00, 北京时间). When composing the task context, state the time together with its timezone (e.g. 结束时间12:00:00+08:00) and never strip the timezone; when extracting, normalize to UTC in 24-hour HH:mm:ssZ format (e.g. 12:00:00 stated as 北京时间 (UTC+8) → 04:00:00Z) and report a format error when no timezone is stated."
               }
             },
-            "required": [
-              "operationType",
-              "region"
-            ]
+            "required": ["operationType", "region"]
           },
           "templateUri": "Task-T/network-layer/ran-energy-saving/v1",
           "promptText": {
@@ -72,10 +63,7 @@
       {
         "result": "success",
         "data": {},
-        "error": {
-          "errCode": "",
-          "errMessage": ""
-        }
+        "error": { "errCode": "", "errMessage": "" }
       },
       {
         "result": "success",
@@ -87,10 +75,7 @@
           "energyTarget": "30%",
           "energyTargetDirection": "reduce"
         },
-        "error": {
-          "errCode": "",
-          "errMessage": ""
-        }
+        "error": { "errCode": "", "errMessage": "" }
       }
     ]
   },
@@ -112,10 +97,7 @@
       {
         "result": "error",
         "data": {},
-        "error": {
-          "errCode": "slot.not_provided",
-          "errMessage": ""
-        }
+        "error": { "errCode": "slot.not_provided", "errMessage": "" }
       }
     ]
   },
@@ -141,10 +123,7 @@
               "operationType": {
                 "type": "string",
                 "description": "Operation type of the RAN energy-saving task; allowed values are listed in the enum",
-                "enum": [
-                  "create",
-                  "modify"
-                ]
+                "enum": ["create", "modify"]
               },
               "region": {
                 "type": "string",
@@ -157,10 +136,7 @@
               "energyTargetDirection": {
                 "type": "string",
                 "description": "Direction of the energy target, derived from user wording: 降低/下降/压降 → reduce; 提升/上升 → increase. If no direction word appears in the task, default to reduce (energy-saving tasks reduce the metric by definition).",
-                "enum": [
-                  "reduce",
-                  "increase"
-                ]
+                "enum": ["reduce", "increase"]
               },
               "cellMode": {
                 "type": "string",
@@ -175,10 +151,7 @@
                 "description": "Daily end time of the energy-saving window. Values carry an explicit UTC offset (e.g. 12:00:00+08:00, 北京时间). When composing the task context, state the time together with its timezone (e.g. 结束时间12:00:00+08:00) and never strip the timezone; when extracting, normalize to UTC in 24-hour HH:mm:ssZ format (e.g. 12:00:00 stated as 北京时间 (UTC+8) → 04:00:00Z) and report a format error when no timezone is stated."
               }
             },
-            "required": [
-              "operationType",
-              "region"
-            ]
+            "required": ["operationType", "region"]
           },
           "templateUri": "Task-T/network-layer/ran-energy-saving/v1",
           "promptText": {
@@ -192,18 +165,12 @@
       {
         "result": "success",
         "data": {},
-        "error": {
-          "errCode": "",
-          "errMessage": ""
-        }
+        "error": { "errCode": "", "errMessage": "" }
       },
       {
         "result": "error",
         "data": {},
-        "error": {
-          "errCode": "negotiation.semantic_rejected",
-          "errMessage": ""
-        }
+        "error": { "errCode": "negotiation.semantic_rejected", "errMessage": "" }
       }
     ]
   },
@@ -225,10 +192,7 @@
       {
         "result": "error",
         "data": {},
-        "error": {
-          "errCode": "slot.constraint_violated",
-          "errMessage": ""
-        }
+        "error": { "errCode": "slot.constraint_violated", "errMessage": "" }
       }
     ]
   }
